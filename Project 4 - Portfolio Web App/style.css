@@ -1,0 +1,211 @@
+/* Add a Google font : Poppins 500  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+/* Universal Selector */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.portfolio-container{
+    min-height: 100vh;  /* becuase we don't need of scroll bar */
+    width: 100%;
+    display: flex; /* To display left-container and right -container in single line */
+
+
+}
+
+.navlist{
+    display: flex;
+
+    gap: 3.5rem; /* by using gap property define gap b/w flexboxes */ 
+    /* background-color: red; */
+
+    height: 15vh; /* To increase the height of navlist class section / div */
+
+    width: 100%;
+
+    justify-content: center; /*move to content at center horizontally */
+
+    align-items: center; /* move to content at center vartically */
+
+    position: fixed; /* to fixed to navbar */
+
+}
+
+.navlist li{
+    list-style: none;/* To remove list style from link */
+}
+
+.navlist li a{
+    text-decoration: none; /* To remove the underline of the text inside the anchor tag / link */
+
+    text-transform: uppercase; /* To convert text in Uppercase */
+
+    font-size: 1rem;
+
+    color: #fff;
+
+    position: relative;
+    
+}
+
+.left-container,.right-container{
+    height: 100vh; /* full webpage vertical height */
+    display: flex;
+}
+
+.left-container{
+    background-color: #262525;
+    width: 75%;
+    padding-left: 3rem;
+    align-items: center;
+}
+
+.right-container{
+    background : linear-gradient(-45deg,#3877FF,#262525 70%);
+    width:25%;
+    /* position: relative; */
+}
+
+.icons .fa-brands{
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+.icons{
+    display: flex; /* To define all icons in single line */
+    flex-direction: column; /* all icons come linarly in vertically */
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    
+}
+
+.content{
+    margin-left: 4rem;
+}
+
+.content .intro{
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.content .intro span{
+    color : #5DB9EE ;
+}
+
+.content h1{
+    font-size: 4rem;
+    color: #5DB9EE;
+}
+
+.content .detail{
+    font-size: 1.1rem;
+    color: #fff;
+    max-width: 38rem;
+    margin: 1.1rem 0 3rem 0; /* top right bottom left */
+    line-height: 1.8rem;
+}
+
+/* Common style on button */
+.btn-container button{
+    border: 0.1rem solid #5DB9EE;
+    font-size: 1.1rem;
+    padding: .8rem 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer; /* To change the cursor arrow cursor to pointer cursor */
+    transition: .5s ease;
+}
+
+/* seperate style on button 1 */
+button:nth-child(1){
+    background-color: #5DB9EE;
+    color: #262525;
+}
+
+/* seperate style on button 2 */
+button:nth-child(2){
+    background-color: transparent;
+    color: #5DB9EE;
+    margin-left: 2rem;
+}
+
+/* Hover effect on button */
+button:nth-child(1):hover{
+    background-color: transparent;
+    color: #5DB9EE;
+}
+
+button:nth-child(2):hover{
+    background-color: #5DB9EE;
+    color: #262525;
+}
+
+/* To make hover effect on icon */
+.icons .fa-brands:hover{
+    cursor: pointer;
+    background: linear-gradient(#fff , #5DB9EE); /* make background of linear gradient with white */
+    -webkit-background-clip: text; /* to push the background color inside the icon only */
+    -webkit-text-fill-color: transparent; /* to see the background color inside the icon */
+}
+
+
+.design .circle{
+    aspect-ratio: 1; /* it means height and width is same */
+    position: absolute;
+    border-radius: 50%; /* to make perfect circle */
+    
+    /* if you want to center with position absolute then apply following three properties on the element. */
+    top:50%;
+    left:75%;
+    transform: translate(-50% , -50%); /* x-axiz and y-axis value  which give circle to the center. */
+
+}
+
+/*always when circle creation maintain width or height same by using aspect-ration : 1 */
+
+.circle:nth-child(1){
+    /* linear-gradient(direction, color-1 distribution% , color-2 distribution%) */
+    background:linear-gradient(90deg ,transparent 50% , #262525 50%);
+    width: 28rem; /* large size circle */
+    
+}
+
+.circle:nth-child(2){
+    width: 20rem; /* small size circle */
+    background-image: url("image/sainath.jpg");
+    background-size: 100%; /* to give the size to the background so the out background image will be zoomed */
+    background-repeat: no-repeat; /* some time it will repeat. so that avoid for that repetation. */
+    border: 0.5rem solid white;
+    box-shadow:
+    0 0 1rem #fff ,
+    inset 0 0 1rem #fff,
+    0 0 2rem #3877FF,
+    inset 0 0 2rem #3877FF,
+    0 0 4rem #3877FF,
+    inset 0 0 4rem #3877FF; /* make light shadow effect */
+
+}
+
+/* To creation of underline to navbar items animation */
+
+.navlist li a::after , .navlist .active::after{
+    content:"";
+    position:absolute;
+    background: #3877FF;
+    width: 100%;
+    height: .1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform .5s;
+}
+
+.navlist li a:hover::after , .navlist .active::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

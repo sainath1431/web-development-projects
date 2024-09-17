@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .nav>ul{
+            display: flex;
+
+        }
+
+        .bold{
+            font-weight: bolder;
+
+        }
+        .font-size-larger{
+            font-size: larger;
+        }
+        .navbar{
+            display: flex;
+        }
+        .logo-img{
+            width: 50px;
+            height: 50px;
+        }
+        .flex{
+            display: flex;
+        }
+        .logo{
+            justify-content: center;
+            width: 15%;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .nav{
+            width: 70%;
+            
+        }
+        .nav>ul{
+            justify-content: center;
+        }
+        .nav>ul>li{
+            list-style: none;
+            padding: 20px;
+            
+        }
+
+        .nav>ul>li>a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .hier{
+            width: 15%;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid green;
+            
+        }
+
+        .hier>a{
+            text-decoration: none;
+            color: #2e57f1;
+        }
+
+        .navbar{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="navbar">
+                <span class="logo flex" style="border: 1px solid black;">
+                    <img class="logo-img" src="logo.png" alt="mylogo">
+                    <h3>Logo</h3>
+                </span>
+                <span class="nav bold font-size-larger" style="border: 1px solid red;">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Skills</a></li>
+                        <li><a href="#">Introduction</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </span>
+                <span class="hier bold font-size-larger"> <a href="#">Hier Me ></a> </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
